@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getEntryBySlug } from "astro:content";
+// Substitui import anterior para incluir getCollection
+import { getEntryBySlug, getCollection } from "astro:content";
+
+// Gera as rotas estaticamente a partir da collection "posts"
+export async function getStaticPaths() {
+  const posts = await getCollection("posts", ({ data }) => !data.draft);
+  return posts.map(({ slug }) => ({ params: { slug } }));
+}
 
 const { slug } = Astro.params;
 const entry = await getEntryBySlug("posts", slug!);
