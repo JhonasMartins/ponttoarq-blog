@@ -1,16 +1,73 @@
 ---
-
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>PonttoArq — Blog de arquitetura e decoração</title>
+  </head>
+  <body class="antialiased bg-white text-neutral-900">
+    <header class="border-b">
+      <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-semibold tracking-tight">PonttoArq</a>
+        <nav class="flex items-center gap-6 text-sm text-neutral-600">
+          <a href="/projetos" class="hover:text-neutral-900">Projetos</a>
+          <a href="/sobre" class="hover:text-neutral-900">Sobre</a>
+          <a href="/contato" class="hover:text-neutral-900">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl/tight md:text-6xl font-semibold tracking-tight">Inspiração e técnica para arquitetura e interiores</h1>
+          <p class="mt-4 text-neutral-600 text-base md:text-lg">Cases, referências e guias práticos — um blog inspirado no ArchDaily, feito para profissionais e apaixonados por design.</p>
+          <div class="mt-8 flex gap-3">
+            <a href="/projetos" class="inline-flex items-center justify-center rounded-md bg-neutral-900 text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800">Ver projetos</a>
+            <a href="#ultimos" class="inline-flex items-center justify-center rounded-md border border-neutral-200 px-4 py-2 text-sm font-medium hover:bg-neutral-50">Últimos artigos</a>
+          </div>
+        </div>
+        <div class="aspect-[4/3] w-full rounded-lg bg-neutral-100"></div>
+      </section>
+
+      <section id="ultimos" class="mx-auto max-w-7xl px-4 pb-20">
+        <h2 class="text-xl font-semibold mb-6">Últimos destaques</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
+            <div class="aspect-[16/9] bg-neutral-100"></div>
+            <div class="p-4">
+              <h3 class="font-medium group-hover:underline">Casa Brise: concreto, luz e vazios</h3>
+              <p class="text-sm text-neutral-600 mt-1">Estudo de ventilação cruzada e brises móveis em clima tropical.</p>
+            </div>
+          </article>
+          <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
+            <div class="aspect-[16/9] bg-neutral-100"></div>
+            <div class="p-4">
+              <h3 class="font-medium group-hover:underline">Guia de materiais: madeira engenheirada</h3>
+              <p class="text-sm text-neutral-600 mt-1">CLT e LVL na prática: prós, contras e detalhes executivos.</p>
+            </div>
+          </article>
+          <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
+            <div class="aspect-[16/9] bg-neutral-100"></div>
+            <div class="p-4">
+              <h3 class="font-medium group-hover:underline">Interiores biofílicos em apartamentos compactos</h3>
+              <p class="text-sm text-neutral-600 mt-1">Luz natural, paleta neutra e texturas orgânicas para bem-estar.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t">
+      <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 flex items-center justify-between">
+        <p>© {new Date().getFullYear()} PonttoArq</p>
+        <p>Inspirado por ArchDaily</p>
+      </div>
+    </footer>
+  </body>
 </html>
