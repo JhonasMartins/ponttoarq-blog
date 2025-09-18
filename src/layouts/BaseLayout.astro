@@ -1,0 +1,45 @@
+---
+interface Props {
+  title?: string
+}
+const { title = "PonttoArq — Blog de arquitetura e decoração" } = Astro.props
+import "../styles/global.css"
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="antialiased bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white">
+    <header class="border-b">
+      <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-[18px] md:text-[20px] font-semibold tracking-tight">PonttoArq</a>
+        <nav class="flex items-center gap-6 text-sm text-neutral-600">
+          <a href="/projetos" class="hover:text-neutral-900">Projetos</a>
+          <a href="/sobre" class="hover:text-neutral-900">Sobre</a>
+          <a href="/contato" class="hover:text-neutral-900">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t">
+      <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 flex items-center justify-between">
+        <p>© {new Date().getFullYear()} PonttoArq</p>
+        <p>Inspirado por ArchDaily</p>
+      </div>
+    </footer>
+  </body>
+</html>
