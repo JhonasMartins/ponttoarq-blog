@@ -1,43 +1,76 @@
 ---
-layout: ../layouts/BaseLayout.astro
-title: PonttoArq — Blog de arquitetura e decoração
+import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "PonttoArq — Blog de arquitetura e decoração";
 ---
 
-<section class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-  <div>
-    <h1 class="text-4xl/tight md:text-6xl font-semibold tracking-tight">Inspiração e técnica para arquitetura e interiores</h1>
-    <p class="mt-4 text-neutral-600 text-base md:text-lg">Cases, referências e guias práticos — um blog inspirado no ArchDaily, feito para profissionais e apaixonados por design.</p>
-    <div class="mt-8 flex gap-3">
-      <a href="/projetos" class="inline-flex items-center justify-center rounded-md bg-neutral-900 text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800">Ver projetos</a>
-      <a href="#ultimos" class="inline-flex items-center justify-center rounded-md border border-neutral-200 px-4 py-2 text-sm font-medium hover:bg-neutral-50">Últimos artigos</a>
+<BaseLayout title={title}>
+  <!-- HERO DESTACADO -->
+  <section class="container-arch py-10 md:py-16">
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Destaque principal -->
+      <article class="md:col-span-2 group rounded-lg overflow-hidden">
+        <div class="aspect-[16/9] w-full bg-neutral-100"></div>
+        <div class="pt-4">
+          <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Residencial</a>
+          <h1 class="mt-2 text-4xl md:text-5xl font-semibold leading-tight">
+            Casa Brise — concreto aparente, luz e vazios
+          </h1>
+          <p class="mt-3 text-neutral-600 max-w-prose">Um estudo de brises móveis e ventilação cruzada em clima tropical, com paleta minimalista e detalhes em madeira engenheirada.</p>
+        </div>
+      </article>
+      <!-- Subdestaques -->
+      <div class="grid gap-6">
+        <article class="group card-arch">
+          <div class="aspect-[16/10] bg-neutral-100"></div>
+          <div class="p-4">
+            <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Materiais</a>
+            <h3 class="mt-2 font-medium group-hover:underline">Madeira engenheirada: CLT & LVL</h3>
+            <p class="text-sm text-neutral-600 mt-1">Prós, contras e detalhes executivos.</p>
+          </div>
+        </article>
+        <article class="group card-arch">
+          <div class="aspect-[16/10] bg-neutral-100"></div>
+          <div class="p-4">
+            <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Interiores</a>
+            <h3 class="mt-2 font-medium group-hover:underline">Biofilia em apartamentos compactos</h3>
+            <p class="text-sm text-neutral-600 mt-1">Luz natural, paleta neutra e texturas orgânicas.</p>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-  <div class="aspect-[4/3] w-full rounded-lg bg-neutral-100"></div>
-</section>
+  </section>
 
-<section id="ultimos" class="mx-auto max-w-7xl px-4 pb-20">
-  <h2 class="text-xl font-semibold mb-6">Últimos destaques</h2>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
-      <div class="aspect-[16/9] bg-neutral-100"></div>
-      <div class="p-4">
-        <h3 class="font-medium group-hover:underline">Casa Brise: concreto, luz e vazios</h3>
-        <p class="text-sm text-neutral-600 mt-1">Estudo de ventilação cruzada e brises móveis em clima tropical.</p>
-      </div>
-    </article>
-    <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
-      <div class="aspect-[16/9] bg-neutral-100"></div>
-      <div class="p-4">
-        <h3 class="font-medium group-hover:underline">Guia de materiais: madeira engenheirada</h3>
-        <p class="text-sm text-neutral-600 mt-1">CLT e LVL na prática: prós, contras e detalhes executivos.</p>
-      </div>
-    </article>
-    <article class="group border rounded-lg overflow-hidden hover:shadow-sm transition">
-      <div class="aspect-[16/9] bg-neutral-100"></div>
-      <div class="p-4">
-        <h3 class="font-medium group-hover:underline">Interiores biofílicos em apartamentos compactos</h3>
-        <p class="text-sm text-neutral-600 mt-1">Luz natural, paleta neutra e texturas orgânicas para bem-estar.</p>
-      </div>
-    </article>
-  </div>
-</section>
+  <!-- EDITORIAL / CATEGORIAS -->
+  <section class="container-arch pb-20">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-xl font-semibold">Editorial</h2>
+      <a href="/projetos" class="text-sm text-neutral-600 hover:text-neutral-900">Ver todos</a>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="group card-arch">
+        <div class="aspect-[16/9] bg-neutral-100"></div>
+        <div class="p-4">
+          <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Urbanismo</a>
+          <h3 class="mt-2 font-medium group-hover:underline">Praças e espaços de transição</h3>
+          <p class="text-sm text-neutral-600 mt-1">Sombras, bancos e vegetação como dispositivos de bem-estar.</p>
+        </div>
+      </article>
+      <article class="group card-arch">
+        <div class="aspect-[16/9] bg-neutral-100"></div>
+        <div class="p-4">
+          <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Detalhes</a>
+          <h3 class="mt-2 font-medium group-hover:underline">Soleiras, rodapés e encontros</h3>
+          <p class="text-sm text-neutral-600 mt-1">Como pequenos detalhes constroem uma linguagem.</p>
+        </div>
+      </article>
+      <article class="group card-arch">
+        <div class="aspect-[16/9] bg-neutral-100"></div>
+        <div class="p-4">
+          <a href="#" class="inline-flex items-center text-xs tracking-wide uppercase text-neutral-500">Tecnologia</a>
+          <h3 class="mt-2 font-medium group-hover:underline">Eficiência energética em retrofit</h3>
+          <p class="text-sm text-neutral-600 mt-1">Envoltórias, brises e automação inteligente.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

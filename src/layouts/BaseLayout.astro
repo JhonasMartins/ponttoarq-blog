@@ -16,11 +16,11 @@ import "../styles/global.css"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body class="antialiased bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white">
-    <header class="border-b">
+    <header class="border-b border-neutral-200">
       <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
         <a href="/" class="text-[18px] md:text-[20px] font-semibold tracking-tight">PonttoArq</a>
         <nav class="flex items-center gap-6 text-sm text-neutral-600">
@@ -35,7 +35,7 @@ import "../styles/global.css"
       <slot />
     </main>
 
-    <footer class="border-t">
+    <footer class="border-t border-neutral-200">
       <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 flex items-center justify-between">
         <p>© {new Date().getFullYear()} PonttoArq</p>
         <p>Inspirado por ArchDaily</p>

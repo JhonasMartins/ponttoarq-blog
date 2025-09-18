@@ -11,6 +11,7 @@
   }
   h1,h2,h3,h4,h5,h6 { 
     letter-spacing: -0.02em; 
+    font-family: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
   ::selection { 
     background: #0a0a0a; 
@@ -21,7 +22,7 @@
 /* Utilitários leves para grid e cartões arquitetônicos */
 @layer utilities {
   .card-arch {
-    @apply border rounded-lg overflow-hidden hover:shadow-sm transition;
+    @apply border border-neutral-200 rounded-lg overflow-hidden hover:shadow-sm transition;
   }
   .container-arch {
     @apply mx-auto max-w-7xl px-4;
