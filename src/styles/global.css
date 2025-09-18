@@ -3,15 +3,14 @@
 /* Camada base para tipografia e reset minimalista */
 @layer base {
   html {
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-feature-settings: "cv02","cv03","cv04","cv11"; /* Inter stylistic sets */
+    font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   body {
     letter-spacing: -0.01em;
   }
   h1,h2,h3,h4,h5,h6 { 
     letter-spacing: -0.02em; 
-    font-family: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: inherit; /* Usa Outfit nos títulos também */
   }
   ::selection { 
     background: #0a0a0a; 
